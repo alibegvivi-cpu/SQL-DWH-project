@@ -116,12 +116,7 @@ BEGIN
                 ELSE 'n/a'
             END AS prd_line,
             prd_start_dt,
-            CASE 
-                WHEN crm_prd_info.prd_end_dt < prd_start_dt 
-                THEN LEAD(prd_start_dt) OVER(PARTITION BY prd_key ORDER BY prd_start_dt ASC) - 1 
-                --возвращаем оригинальную дату окончания, если оверлаппинга нет
-                ELSE bronze.crm_prd_info.prd_end_dt
-                END AS prd_end_dt
+			LEAD(prd_start_dt) OVER(PARTITION BY prd_key ORDER BY prd_start_dt ASC) - 1 AS prd_end_dt
         FROM bronze.crm_prd_info;
 
         v_end_time := clock_timestamp();
