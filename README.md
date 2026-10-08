@@ -1,7 +1,7 @@
 # SQL-DWH-project
   Архитектура данных для этого проекта основана на Медальонной архитектуре (Medallion Architecture) и состоит из слоев Bronze (Бронзовый), Silver (Серебряный) и Gold (Золотой):
 
-csv-medallion-analytics-project/docs/data_architecture.png
+![Архитектура данных](docs/data_architecture.png)
   
   1. Слой Bronze (Бронзовый): Содержит необработанные (сырые) данные в том виде, в котором они поступают из исходных систем. Данные загружаются из CSV-файлов в базу данных SQL Server.
   
