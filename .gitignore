@@ -1,0 +1,27 @@
+# Системные файлы операционных систем
+.DS_Store
+Thumbs.db
+
+# Локальные конфигурации и секреты
+*.env
+.env
+
+# Файлы баз данных (SQL Server / PostgreSQL)
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.dump
+
+# Временные файлы и логи
+*.log
+*.tmp
+
+# Настройки сред разработки (IDE)
+.vscode/
+.idea/
+
+# Данные и экспорт 
+datasets/*.csv
+datasets/*.xlsx
+*.pdf
